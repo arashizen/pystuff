@@ -1,5 +1,6 @@
 # Simple grid that allows the user to color each cell using the mouse button or scroll wheel.
 # 10 colors that correspond to each number key, press the keys to see the names of each color. 0 Acts as an eraser, coloring the cell back to its original color.
+# Remember to install pygame if you have not already!
 
 import pygame
 import sys
