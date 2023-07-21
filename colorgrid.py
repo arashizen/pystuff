@@ -4,7 +4,6 @@
 import pygame
 import sys
 
-# Define colors
 COLORS = {
     1: (0, 0, 0),
     2: (255, 255, 255),
@@ -32,21 +31,18 @@ COLOR_NAMES = {
 }
 
 
-# Game Settings
 GRID_SIZE = 50
 CELL_SIZE = 20
 WINDOW_WIDTH = GRID_SIZE * CELL_SIZE
 WINDOW_HEIGHT = GRID_SIZE * CELL_SIZE
 FPS = 60
 
-# Initialize Pygame
 pygame.init()
 pygame.font.init()
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
 
-# Initialize grid
 grid = [[COLORS[0] for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
 color = COLORS[1]
 color_name = COLOR_NAMES[1]
@@ -97,7 +93,6 @@ while True:
             pygame.draw.rect(screen, col, pygame.Rect(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE))
             pygame.draw.rect(screen, (0, 0, 0), pygame.Rect(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE), 1)
 
-    # Render the color name
     font = pygame.font.Font(None, 36)
     text = font.render(color_name, True, (0, 0, 0))
     screen.blit(text, (10, 10))
